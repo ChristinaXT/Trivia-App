@@ -38,10 +38,11 @@ class App extends React.Component {
            </div>
 
        <div>
-        <button>answer</button>
-        <button>answer</button>
-        <button>answer</button>
-        <button>answer</button>
+        <button className='bg-green-500 w-1/2 p-4'>answer</button>
+        <button className='bg-green-500 w-1/2 p-4'>answer</button>
+        <button className='bg-green-500 w-1/2 p-4'>answer</button>
+        <button className='bg-green-500 w-1/2 p-4'>answer</button>
+
        </div>
       </div>
     )
