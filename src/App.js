@@ -38,10 +38,10 @@ class App extends React.Component {
            </div>
 
        <div>
-        <div>answer</div>
-        <div>answer</div>
-        <div>answer</div>
-        <div>answer</div>
+        <button>answer</button>
+        <button>answer</button>
+        <button>answer</button>
+        <button>answer</button>
        </div>
       </div>
     )
