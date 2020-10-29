@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import App.css from 'app.css';
 
 
 
@@ -28,11 +29,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-      <h1>Trivia Game</h1>
-          <div>
-            <h3>question</h3>
-          </div>
+      <div className='container'>
+        <h1>Trivia Game</h1>
+        <div className='question-box'>
+          <h2 className='q-text'>
+            question
+          </h2>
+           </div>
+
        <div>
         <div>answer</div>
         <div>answer</div>
