@@ -32,16 +32,16 @@ class App extends React.Component {
       <div className='container'>
 
         <div className='bg-black text-purple-500 p-10 rounded-lg shadow-mg'>
-          <h2 className='text-4xl'>
+          <h2 className='text-3xl'>
             question
           </h2>
            </div>
 
-       <div>
-        <button className='bg-green-500 w-1/2 p-4 text-black-800'>answer</button>
-        <button className='bg-green-500 w-1/2 p-4 text-black-800'>answer</button>
-        <button className='bg-green-500 w-1/2 p-4 text-black-800'>answer</button>
-        <button className='bg-green-500 w-1/2 p-4 text-black-800'>answer</button>
+       <div className='mt-5'>
+        <button className='bg-green-500 hover:bg-purple-500 w-1/2 p-4 text-black-800 font-bold py-2 px-4 border border-black rounded-lg shadow-mg'>answer</button>
+        <button className='bg-green-500 hover:bg-purple-500 w-1/2 p-4 text-black-800 font-bold py-2 px-4 border border-black rounded-lg shadow-mg'>answer</button>
+        <button className='bg-green-500 hover:bg-purple-500 w-1/2 p-4 text-black-800 font-bold py-2 px-4 border border-black rounded-lg shadow-mg'>answer</button>
+        <button className='bg-green-500 hover:bg-purple-500 w-1/2 p-4 text-black-800 font-bold py-2 px-4 border border-black rounded-lg shadow-mg'>answer</button>
 
        </div>
       </div>
