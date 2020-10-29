@@ -30,9 +30,9 @@ class App extends React.Component {
   render() {
     return (
       <div className='container'>
-        <h1>Trivia Game</h1>
-        <div className='question-box'>
-          <h2 className='q-text'>
+
+        <div className='bg-black text-purple-500 p-10 rounded'>
+          <h2 className='text-4xl'>
             question
           </h2>
            </div>
