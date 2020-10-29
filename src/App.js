@@ -2,8 +2,6 @@ import React from 'react';
 import axios from 'axios';
 
 
-
-
 class App extends React.Component {
   state = {
     facts: []
@@ -29,10 +27,10 @@ class App extends React.Component {
 
   render() {
     return (
-  
+
       <div className='container'>
 
-        <div className='bg-black text-purple-500 p-10 rounded-lg shadow-mg w-full'>
+        <div className='bg-black text-purple-500 p-10 rounded-lg shadow-mg'>
           <h2 className='text-3xl'>
             question
           </h2>
