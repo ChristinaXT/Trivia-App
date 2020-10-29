@@ -31,7 +31,7 @@ class App extends React.Component {
     return (
       <div className='container'>
 
-        <div className='bg-black text-purple-500 p-10 rounded'>
+        <div className='bg-black text-purple-500 p-10 rounded-lg shadow-mg'>
           <h2 className='text-4xl'>
             question
           </h2>
