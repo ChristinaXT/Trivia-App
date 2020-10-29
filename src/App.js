@@ -9,7 +9,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/quiz-info')
+    const url = 'http://localhost:3001/quiz-info';
+
+    axios.get(url)
     .then((response) => {
       const facts = response.data;
 
@@ -26,13 +28,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
       <h1>Trivia Game</h1>
-        {this.state.facts.map((fact, index) => (
-          <div key={index}>
-            <h3>{fact.question}</h3>
+          <div>
+            <h3>question</h3>
           </div>
-        ))}
+       <div>
+        <div>answer</div>
+        <div>answer</div>
+        <div>answer</div>
+        <div>answer</div>
+       </div>
       </div>
     )
   }
