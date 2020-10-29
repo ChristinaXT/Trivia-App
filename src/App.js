@@ -27,7 +27,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <h1>Game</h1>
+      <h1>Trivia Game</h1>
         {this.state.facts.map((fact, index) => (
           <div key={index}>
             <h3>{fact.question}</h3>
