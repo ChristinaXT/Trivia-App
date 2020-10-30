@@ -7,19 +7,23 @@ const url = 'http://localhost:3001/quiz-info';
 
 const App = () => {
   const [questions, setQuestions] = useState([]);
+  const [currentQuestion, setCurrentQuestion] = useState(undefined);
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
        setQuestions(data);
-       // console.log(data);
-       // console.log(data[1].question);
+       setCurrentQuestion(data);
       });
   }, []);
 
   const baseAnswer = (answer) => {
-     //blah 
+     //check for the Answer
+     // show another // QUESTION:
+     // change score if correct
+
+
   };
 
    if(!questions.length) {
