@@ -8,7 +8,9 @@ const Button = ({ answer }) => (
   </button>
 );
 
-const Trivia = ({ data: { question, correct, incorrect } }) => (
+const Trivia = ({ handleAnswer, data: { question, correct, incorrect } }) => {
+    const shuffledAnswer = [correct, ...incorrect];
+  return (
   <div>
     <div className='bg-black text-purple-500 p-10
       rounded-lg shadow-md'>
@@ -18,12 +20,12 @@ const Trivia = ({ data: { question, correct, incorrect } }) => (
     </div>
 
    <div className='grid grid-cols-2 gap-6 mt-6'>
-     <Button answer={correct} />
-     <Button answer={incorrect[0]} />
-     <Button answer={incorrect[1]} />
-     <Button answer={incorrect[2]} />
+     <Button onClick={() => handleAnswer(shuffledAnswer[0])}answer={shuffledAnswer[0]} />
+     <Button onClick={() => handleAnswer(shuffledAnswer[1])}answer={shuffledAnswer[1]} />
+     <Button onClick={() => handleAnswer(shuffledAnswer[2])}answer={shuffledAnswer[2]} />
+     <Button onClick={() => handleAnswer(shuffledAnswer[3])}answer={shuffledAnswer[3]} />
    </div>
  </div>
-)
+)};
 
 export default Trivia;
