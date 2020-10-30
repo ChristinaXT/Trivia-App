@@ -42,15 +42,15 @@ const App = () => {
             </button>
             <button className='bg-yellow-500 hover:bg-purple-500 w-1/2 p-4
             text-black-800 font-bold py-2 px-4 border border-black
-            rounded-lg shadow-md mb-4'>{questions[0].incorrect}
+            rounded-lg shadow-md mb-4'>{questions[0].incorrect[0]}
             </button>
             <button className='bg-yellow-500 hover:bg-purple-500 w-1/2 p-4
             text-black-800 font-bold py-2 px-4 border border-black
-            rounded-lg shadow-md mb-4'>{questions[0].incorrect}
+            rounded-lg shadow-md mb-4'>{questions[0].incorrect[1]}
             </button>
             <button className='bg-yellow-500 hover:bg-purple-500 w-1/2 p-4
             text-black-800 font-bold py-2 px-4 border border-black
-            rounded-lg shadow-md mb-4'>{questions[0].incorrect}
+            rounded-lg shadow-md mb-4'>{questions[0].incorrect[2]}
             </button>
            </div>
          </div>
