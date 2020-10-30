@@ -21,25 +21,25 @@ const Trivia = ({ baseAnswer, data: { question, correct, incorrect } }) => {
 
    <div className='grid grid-cols-2 gap-6 mt-6'>
      <Button
-       className={correct===mixedAnswer[0] ? 'bg-green-200' : ''}
+       className={correct===mixedAnswer[0] ? 'bg-yellow-500' : ''}
        onClick={() => baseAnswer
        (mixedAnswer[0])}
        answer={mixedAnswer[0]}
        />
      <Button
-       className={correct===mixedAnswer[1] ? 'bg-green-200' : ''}
+       className={correct===mixedAnswer[1] ? 'bg-yellow-500' : ''}
        onClick={() => baseAnswer
        (mixedAnswer[1])}
        answer={mixedAnswer[1]}
        />
      <Button
-       className={correct===mixedAnswer[2] ? 'bg-green-200' : ''}
+       className={correct===mixedAnswer[2] ? 'bg-yellow-500' : ''}
        onClick={() => baseAnswer
        (mixedAnswer[2])}
        answer={mixedAnswer[2]}
        />
      <Button
-       className={correct===mixedAnswer[3] ? 'bg-green-200' : ''}
+       className={correct===mixedAnswer[3] ? 'bg-yellow-500' : ''}
        onClick={() => baseAnswer
        (mixedAnswer[3])}
        answer={mixedAnswer[3]}
