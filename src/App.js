@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 
-
 const url = 'http://localhost:3001/quiz-info';
 
 function App() {
@@ -15,9 +14,8 @@ useEffect(() => {
     });
 }, []);
 
-    return (
+    return questions.length > 0 ? (
       <div className='container'>
-         {questions.length > 0 ? (
         <div className='bg-black text-purple-500 p-10 rounded-lg shadow-mg'>
           <h2 className='text-3xl'>
             {questions[0].question}
@@ -42,11 +40,11 @@ useEffect(() => {
         rounded-lg shadow-mg mb-4'>{questions[0].incorrect_answer}
         </button>
        </div>
-     ) : (
+     </div>
+   ) : (
         <h1>....Loading!</h1>
-         )}
-      </div>
-    );
+       )
+
   }
 
 
