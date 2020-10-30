@@ -57,7 +57,7 @@ const App = () => {
        )
        :
        (
-          <h1>....Loading!</h1>
+          <h2 className='text-2xl text-green'>....Loading!</h2>
         )
 
       }
