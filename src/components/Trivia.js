@@ -29,3 +29,5 @@ const Trivia = ({ data: {question, correct, incorrect} }) => (
    </div>
  </div>
 )
+
+export default Trivia;
