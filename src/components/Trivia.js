@@ -8,8 +8,8 @@ const Button = ({ answer }) => (
   </button>
 );
 
-const Trivia = ({ handleAnswer, data: { question, correct, incorrect } }) => {
-    const shuffledAnswer = [correct, ...incorrect];
+const Trivia = ({ baseAnswer, data: { question, correct, incorrect } }) => {
+    const mixedAnswer = [correct, ...incorrect];
   return (
   <div>
     <div className='bg-black text-purple-500 p-10
@@ -20,10 +20,10 @@ const Trivia = ({ handleAnswer, data: { question, correct, incorrect } }) => {
     </div>
 
    <div className='grid grid-cols-2 gap-6 mt-6'>
-     <Button onClick={() => handleAnswer(shuffledAnswer[0])}answer={shuffledAnswer[0]} />
-     <Button onClick={() => handleAnswer(shuffledAnswer[1])}answer={shuffledAnswer[1]} />
-     <Button onClick={() => handleAnswer(shuffledAnswer[2])}answer={shuffledAnswer[2]} />
-     <Button onClick={() => handleAnswer(shuffledAnswer[3])}answer={shuffledAnswer[3]} />
+     <Button onClick={() => baseAnswer(mixedAnswer[0])}answer={mixedAnswer[0]} />
+     <Button onClick={() => baseAnswer(mixedAnswer[1])}answer={mixedAnswer[1]} />
+     <Button onClick={() => baseAnswer(mixedAnswer[2])}answer={mixedAnswer[2]} />
+     <Button onClick={() => baseAnswer(mixedAnswer[3])}answer={mixedAnswer[3]} />
    </div>
  </div>
 )};
