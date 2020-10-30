@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const url = 'http://localhost:3001/quiz-info';
 
-function App() {
+const App = () => {
   const [questions, setQuestions] = useState([]);
 
 useEffect(() => {
@@ -14,12 +14,17 @@ useEffect(() => {
     });
 }, []);
 
+   // if(!questions.length) {
+   //   return null;
+   // }
+
     return questions.length > 0 ? (
       <div className='container'>
-        <div className='bg-black text-purple-500 p-10 rounded-lg shadow-mg'>
-          <h2 className='text-3xl'>
+        <div className='bg-black text-purple-500 p-10
+        rounded-lg shadow-md'>
+          <h2 className='text-3xl'
             {questions[0].question}
-          </h2>
+          />
            </div>
 
        <div className='mt-5'>
