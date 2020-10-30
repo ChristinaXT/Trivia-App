@@ -30,19 +30,19 @@ useEffect(() => {
        <div className='mt-5'>
         <button className='bg-green-500 hover:bg-purple-500 w-1/2 p-4
         text-black-800 font-bold py-2 px-4 border border-black
-        rounded-lg shadow-mg mb-4'>{questions[0].correct_answer}
+        rounded-lg shadow-md mb-4'>{questions[0].correct_answer}
         </button>
         <button className='bg-green-500 hover:bg-purple-500 w-1/2 p-4
         text-black-800 font-bold py-2 px-4 border border-black
-        rounded-lg shadow-mg mb-4'>{questions[0].incorrect_answer}
+        rounded-lg shadow-md mb-4'>{questions[0].incorrect_answer}
         </button>
         <button className='bg-green-500 hover:bg-purple-500 w-1/2 p-4
         text-black-800 font-bold py-2 px-4 border border-black
-        rounded-lg shadow-mg mb-4'>{questions[0].incorrect_answer}
+        rounded-lg shadow-md mb-4'>{questions[0].incorrect_answer}
         </button>
         <button className='bg-green-500 hover:bg-purple-500 w-1/2 p-4
         text-black-800 font-bold py-2 px-4 border border-black
-        rounded-lg shadow-mg mb-4'>{questions[0].incorrect_answer}
+        rounded-lg shadow-md mb-4'>{questions[0].incorrect_answer}
         </button>
        </div>
      </div>
