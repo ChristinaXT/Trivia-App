@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Trivia = (question) => (
+const Trivia = (props) => (
   <div>
   <div className='bg-black text-purple-500 p-10
   rounded-lg shadow-md'>
