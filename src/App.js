@@ -35,7 +35,7 @@ const App = () => {
        )
        :
        (
-          <h2 className='text-2xl text-green'>....Loading!</h2>
+          <h2 className='text-2xl text-green'>..Spiders..Dancing!</h2>
         )
 
       }
