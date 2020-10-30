@@ -18,6 +18,10 @@ const App = () => {
       });
   }, []);
 
+  const baseAnswer = (answer) => {
+     //blah 
+  };
+
    if(!questions.length) {
      return null;
    }
@@ -30,7 +34,7 @@ const App = () => {
         ?
         (
           <div className='container'>
-            <Trivia data={questions[0]}/>
+            <Trivia data={questions[0]} baseAnswer={baseAnswer} />
          </div>
        )
        :
