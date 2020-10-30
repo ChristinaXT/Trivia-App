@@ -18,10 +18,10 @@ const Trivia = ({ data: {question, correct, incorrect} }) => (
   </div>
 
    <div className='grid grid-cols-2 gap-6 mt-6'>
-   <button answer={correct} />
-   <button answer={incorrect[0]} />
-   <button answer={incorrect[1]} />
-   <button answer={incorrect[2]} />
+     <button answer={correct} />
+     <button answer={incorrect[0]} />
+     <button answer={incorrect[1]} />
+     <button answer={incorrect[2]} />
    </div>
  </div>
 )
