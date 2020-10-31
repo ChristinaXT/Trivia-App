@@ -7,7 +7,9 @@ const url = 'http://localhost:3001/quiz-info';
 
 const App = () => {
   const [questions, setQuestions] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(undefined);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [score, setScore] = useState(0);
+  const [gameEnds, setGameEnds] = useState(false);
 
   useEffect(() => {
     fetch(url)
@@ -18,11 +20,15 @@ const App = () => {
   }, []);
 
   const baseAnswer = (answer) => {
-     //check for the Answer
-     // show another // QUESTION:
-     // change score if correct
+    setCurrentIndex(currentIndex + 1);
 
-  };
+    if(answer === questions[currentIndex].
+    correct) {
+      setScore(score + 1);
+      }
+    }
+
+
 
    if(!questions.length) {
      return null;
