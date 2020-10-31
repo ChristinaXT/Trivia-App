@@ -32,6 +32,7 @@ const Trivia = ({
                 className={`text-black-800 ${bgColor}
                 p-4
                 hover:bg-white
+                hover:text-orange-500
                 font-bold
                 border border-black
                 rounded shadow`}
