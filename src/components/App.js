@@ -7,7 +7,7 @@ const url = 'http://localhost:3001/quiz-info';
 
 const App = () => {
   const [questions, setQuestions] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentList, setCurrentList] = useState(0);
   const [score, setScore] = useState(0);
   const [showAnswers, setShowAnswers] = useState(false);
 
@@ -33,7 +33,7 @@ const App = () => {
   const baseAnswer = (answer) => {
     if(!showAnswers) {
       // prevent multiples
-    if(answer === questions[currentIndex].correct) {
+    if(answer === questions[currentList].correct) {
       setScore(score + 1);
   }
 }
@@ -44,7 +44,7 @@ const App = () => {
 const handleNewQuestion = () => {
   setShowAnswers(false);
 
-  setCurrentIndex(currentIndex + 1);
+  setCurrentList(currentList + 1);
 };
 
 const reloadPage = () => {
@@ -63,7 +63,7 @@ const reloadPage = () => {
             (
             <div className='container'>
               {
-                currentIndex >= questions.length
+                currentList >= questions.length
               ?
               (
 
@@ -76,7 +76,7 @@ const reloadPage = () => {
                 </h2>
                 :
                 <h2 className="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">
-                    Your Score: You got {score} out of 10 questions. You Suck!
+                    Your Score: You got {score} out of 10 questions. You can Do it, Try Again!
                 </h2>
               }
                   <div class="mt-8 flex justify-center">
@@ -91,7 +91,7 @@ const reloadPage = () => {
 
               ) : (
                   <Trivia
-                  data={questions[currentIndex]}
+                  data={questions[currentList]}
                   showAnswers={showAnswers}
                   handleNewQuestion={handleNewQuestion}
                   baseAnswer={baseAnswer}

@@ -31,6 +31,7 @@ const Trivia = ({
                 key={index}
                 className={`text-black-800 ${bgColor}
                 p-4
+                hover:bg-white
                 font-bold
                 border border-black
                 rounded shadow`}
@@ -45,7 +46,7 @@ const Trivia = ({
         <button
         onClick={handleNewQuestion}
         className={`ml-auto bg-black text-red-800
-        p-4 font-bold rounded shadow mt-6`}>
+        p-4 font-bold hover:text-white rounded shadow mt-6`}>
         New Question
        </button>
 
