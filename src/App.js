@@ -7,14 +7,13 @@ const url = 'http://localhost:3001/quiz-info';
 
 const App = () => {
   const [questions, setQuestions] = useState([]);
-  const [currentQuestion, setCurrentQuestion] = useState(undefined);
+  const [currentIndex, setCurrentIndex] = useState(undefined);
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
        setQuestions(data);
-       setCurrentQuestion(data);
       });
   }, []);
 
@@ -22,7 +21,6 @@ const App = () => {
      //check for the Answer
      // show another // QUESTION:
      // change score if correct
-
 
   };
 
@@ -33,23 +31,20 @@ const App = () => {
     return (
       <div>
       {
-
         questions.length > 0
         ?
         (
           <div className='container'>
-            <Trivia data={questions[0]} baseAnswer={baseAnswer} />
+            <Trivia data={questions[currentIndex]} baseAnswer={baseAnswer} />
          </div>
        )
        :
        (
-          <h2 className='text-2xl text-green'>..Spiders..Dancing!</h2>
+          <h2 className='text-2xl text-green'>..The Spiders are Dancing!</h2>
         )
-
       }
       </div>
     )
-
   }
 
 
