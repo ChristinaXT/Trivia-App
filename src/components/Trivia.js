@@ -4,7 +4,7 @@ import React from 'react';
 const Trivia = ({
     showAnswers,
     baseAnswer,
-    handleNextQuestion,
+    handleNewQuestion,
     data: { question, correct,
       incorrect
     } }) => {
@@ -47,7 +47,7 @@ const Trivia = ({
       </div>
       {showAnswers && (
         <button
-        onClick={handleNextQuestion}
+        onClick={handleNewQuestion}
         className={`ml-auto bg-black text-red-800
         p-4 font-bold rounded shadow mt-6`}>
         New Question

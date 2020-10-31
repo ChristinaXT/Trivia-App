@@ -32,7 +32,7 @@ const App = () => {
 
 };
 
-const handleNextQuestion = () => {
+const handleNewQuestion = () => {
   setShowAnswers(false);
 
   setCurrentIndex(currentIndex + 1);
@@ -55,7 +55,7 @@ const handleNextQuestion = () => {
             <Trivia
             data={questions[currentIndex]}
             showAnswers={showAnswers}
-            handleNextQuestion={handleNextQuestion}
+            handleNewQuestion={handleNewQuestion}
             baseAnswer={baseAnswer}
             />
            )}
