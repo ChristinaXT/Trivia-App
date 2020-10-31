@@ -28,13 +28,14 @@ const Trivia = ({
           const bgColor = showAnswers ?
           answer === correct
           ? 'bg-green-500'
-          : 'bg-red-500'
+          : 'bg-red-800'
           : 'bg-yellow-500';
+          const textcolor = showAnswers ?
+          'text-white' : 'text-black-800';
           return (
              <button
-                className={`${bgColor}
+                className={`${bgColor} ${textcolor}
                 p-4
-                text-black-800
                 font-bold
                 border border-black
                 rounded shadow`}
