@@ -29,24 +29,7 @@ const App = () => {
       });
   }, []);
 
-  {/* useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-       const questions = data.map((question) =>
-       ({
-         ...question,
-         answers: [
-           question.correct,
-           ...question.incorrect,
-         ].sort(() => Math.random() - 0.5),
-       }));
-
-        setQuestions(questions);
-      });
-  }, []); */}
-
-
+  
   const baseAnswer = (answer) => {
     if(!showAnswers) {
       // prevent multiples
