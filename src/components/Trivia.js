@@ -16,14 +16,13 @@ const Trivia = ({ baseAnswer, data: { question, correct, incorrect } }) => {
 
       {mixedAnswer.map(answer => (
           <button
-              className={`${correct===answer
-                ? 'bg-yellow-500' :
-                'bg-yellow-500'
-               } p-4
+              className=
+                'bg-yellow-500
+                p-4
                 text-black-800
                 font-bold
                 border border-black
-                rounded-lg shadow-md`}
+                rounded-lg shadow-md'
                 onClick={() => baseAnswer
               (answer)}>
               {answer}
