@@ -21,10 +21,9 @@ const App = () => {
   }, []);
 
 
-
   const baseAnswer = (answer) => {
     if(!showAnswers) {
-      // prevent multiples 
+      // prevent multiples
     if(answer === questions[currentIndex].correct) {
       setScore(score + 1);
   }
@@ -32,37 +31,40 @@ const App = () => {
   setShowAnswers(true);
 
 };
+
+const handleNextQuestion = () => {
+  setShowAnswers(false);
+
+  setCurrentIndex(currentIndex + 1);
+};
+
    if(!questions.length) {
      return null;
    }
 
-
     return (
-      <div>
-      {
+
             questions.length > 0 ? (
           <div className='container'>
             currentIndex >=questions.length ? (
-            <h1 className="text-3xl text-black font-bold">
+            <h1 className="text-3xl text-white-800 font-bold">
             You are a Genius!! Your Score is {score}!
             </h1>
+
           ) : (
             <Trivia
             data={questions[currentIndex]}
-            showAnswers{showAnswers}
+            showAnswers={showAnswers}
+            handleNextQuestion={handleNextQuestion}
             baseAnswer={baseAnswer}
             />
-          )
-         </div>
+           )}
+        </div>
        ) : (
-          <h2 className='text-2xl text-green'>..The Spiders are Dancing!</h2>
-        )
-      }
-      </div>
+          <h2 className='text-2xl text-green font-bold'>..The Spiders are Dancing!</h2>
 
-   )
-   }
-
+    ))
+  }
 
 
 export default App;

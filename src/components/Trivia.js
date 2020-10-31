@@ -4,6 +4,7 @@ import React from 'react';
 const Trivia = ({
     showAnswers,
     baseAnswer,
+    handleNextQuestion,
     data: { question, correct,
       incorrect
     } }) => {
@@ -13,7 +14,7 @@ const Trivia = ({
       );
 
   return (
-     <div>
+     <div className='flex flex-col'>
         <div className='bg-black text-purple-500
         p-10 rounded-lg shadow-md'>
          <h2
@@ -27,14 +28,12 @@ const Trivia = ({
        {mixedAnswers.map((answer) => {
           const textColor = showAnswers ?
           answer === correct
-          ? 'text-green-500'
+          ? 'text-green-800'
           : 'text-red-800'
           : 'text-black-800';
-          // const textColor = showAnswers ?
-          // 'text-white' : 'text-black-800';
           return (
              <button
-                className={`bg-yellow ${textColor}
+                className={`bg-yellow-500 ${textColor}
                 p-4
                 font-bold
                 border border-black
@@ -43,11 +42,18 @@ const Trivia = ({
                 (answer)}>
                 {answer}
           </button>
-         );
+          );
         })}
-
       </div>
+      {showAnswers && (
+        <button
+        onClick={handleNextQuestion}
+        className={`ml-auto bg-black text-red-800
+        p-4 font-bold rounded shadow mt-6`}>
+        New Question
+       </button>
 
+      )}
    </div>
    );
 };
