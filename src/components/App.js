@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Trivia } from './components';
+import Trivia from './Trivia';
 
 
 const url = 'http://localhost:3001/quiz-info';
@@ -66,14 +66,27 @@ const reloadPage = () => {
                 currentIndex >= questions.length
               ?
               (
-              <div className="flex justify-center items-center-px-10">
-                <h1 className="text-3xl text-white font-bold">
-                Your Score: You got {score} out of 10 questions. Pretty Clever!
-                </h1>
-                <button onClick={reloadPage} className={`ml-auto bg-black hover:bg-purple-700 hover:text-yellow-300 text-red-800 font-bubble font-bold
-                  py-2 px-4 p4 hover:border-red-500 rounded shadow h-16 w-24 mt-20`}>
-                TRY AGAIN?
-                </button>
+
+              <div class="max-w-screen-lg bg-orange-500 shadow-2xl rounded-lg mx-auto text-center p-12 mt-4">
+              {
+                score > 7
+                ?
+                <h2 className="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">
+                    Your Score: You got {score} out of 10 questions. Pretty Clever!
+                </h2>
+                :
+                <h2 className="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">
+                    Your Score: You got {score} out of 10 questions. You Suck!
+                </h2>
+              }
+                  <div class="mt-8 flex justify-center">
+                      <div className="inline-flex rounded-md bg-white shadow">
+                          <button onClick={reloadPage} className={`bg-black hover:bg-purple-700 hover:text-yellow-300
+                            text-red-800 font-bold py-2 px-6 border border-white hover:border-white rounded shadow`}>
+                          TRY AGAIN?
+                          </button>
+                      </div>
+                  </div>
               </div>
 
               ) : (

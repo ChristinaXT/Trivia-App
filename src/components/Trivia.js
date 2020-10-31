@@ -20,7 +20,7 @@ const Trivia = ({
 
       <div className='grid grid-cols-2 gap-6 mt-6'>
 
-       {answers.map((answer, idx) => {
+       {answers.map((answer, index) => {
           const bgColor = showAnswers ?
           answer === correct
           ? 'bg-green-800'
@@ -28,7 +28,7 @@ const Trivia = ({
           : 'bg-yellow-500';
           return (
              <button
-                key={idx}
+                key={index}
                 className={`text-black-800 ${bgColor}
                 p-4
                 font-bold
