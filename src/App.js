@@ -20,15 +20,18 @@ const App = () => {
   }, []);
 
   const baseAnswer = (answer) => {
-    setCurrentIndex(currentIndex + 1);
+    const newIndex = currentIndex + 1;
+    setCurrentIndex(newIndex);
 
     if(answer === questions[currentIndex].
     correct) {
       setScore(score + 1);
       }
+
+    if(newIndex >= questions.length) {
+      setGameEnds(true);
     }
-
-
+  };
 
    if(!questions.length) {
      return null;
@@ -37,9 +40,8 @@ const App = () => {
     return (
       <div>
       {
-
           gameEnds ? (
-            <div>Your Score was {score}</div>
+            <h1 className="text-3xl text-black font-bold">Your Score was {score}</h1>
           )
           :
           (
