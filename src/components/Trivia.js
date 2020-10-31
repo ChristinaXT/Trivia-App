@@ -5,11 +5,11 @@ const Trivia = ({
     showAnswers,
     baseAnswer,
     handleNewQuestion,
-    data: { question, correct,
-      incorrect
-    } }) => {
+    data: { question, correct, incorrect }
+    ,
+}) => {
     const mixedAnswers = [correct, ...
-      incorrect].sort(
+    incorrect].sort(
         () => Math.random() - 0.5
       );
 
@@ -25,7 +25,7 @@ const Trivia = ({
 
       <div className='grid grid-cols-2 gap-6 mt-6'>
 
-       {mixedAnswers.map((answer) => {
+       {mixedAnswers.map((answer, idx) => {
           const textColor = showAnswers ?
           answer === correct
           ? 'text-green-800'
@@ -33,6 +33,7 @@ const Trivia = ({
           : 'text-black-800';
           return (
              <button
+                key={idx}
                 className={`bg-yellow-500 ${textColor}
                 p-4
                 font-bold
