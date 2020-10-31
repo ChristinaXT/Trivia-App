@@ -25,7 +25,7 @@ const App = () => {
          ].sort(() => Math.random() - 0.5),
        }));
 
-        setQuestions(questions.sort(() => Math.random()).slice(0, 10));
+        setQuestions(questions.sort(() => Math.random() -0.5).slice(0, 10));
       });
   }, []);
 
