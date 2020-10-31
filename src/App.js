@@ -16,7 +16,16 @@ const App = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-       setQuestions(data);
+       const questions = data.map((question) =>
+       ({
+         ...question,
+         answers: [
+           question.correct,
+           ...question.incorrect,
+         ].sort(() => Math.random() - 0.5),
+       }));
+
+        setQuestions(questions);
       });
   }, []);
 
@@ -43,12 +52,11 @@ const handleNewQuestion = () => {
    }
 
     return (
-
             questions.length > 0 ? (
           <div className='container'>
             currentIndex >=questions.length ? (
             <h1 className="text-3xl text-white-800 font-bold">
-            You are a Genius!! Your Score is {score}!
+            Nice Job!! Your Score is {score}!
             </h1>
 
           ) : (

@@ -5,13 +5,8 @@ const Trivia = ({
     showAnswers,
     baseAnswer,
     handleNewQuestion,
-    data: { question, correct, incorrect }
-    ,
+    data: { question, correct, answers },
 }) => {
-    const mixedAnswers = [correct, ...
-    incorrect].sort(
-        () => Math.random() - 0.5
-      );
 
   return (
      <div className='flex flex-col'>
@@ -25,16 +20,16 @@ const Trivia = ({
 
       <div className='grid grid-cols-2 gap-6 mt-6'>
 
-       {mixedAnswers.map((answer, idx) => {
-          const textColor = showAnswers ?
+       {answers.map((answer, idx) => {
+          const bgColor = showAnswers ?
           answer === correct
-          ? 'text-green-800'
-          : 'text-red-800'
-          : 'text-black-800';
+          ? 'bg-green-800'
+          : 'bg-red-800'
+          : 'bg-yellow-500';
           return (
              <button
                 key={idx}
-                className={`bg-yellow-500 ${textColor}
+                className={`text-black-800 ${bgColor}
                 p-4
                 font-bold
                 border border-black
