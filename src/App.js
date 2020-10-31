@@ -41,7 +41,7 @@ const App = () => {
       <div>
       {
           gameEnds ? (
-            <h1 className="text-3xl text-black font-bold">Great Job! Your Score is {score}!</h1>
+            <h1 className="text-3xl text-black font-bold">You are a Genius!! Your Score is {score}!</h1>
           )
           :
           (
