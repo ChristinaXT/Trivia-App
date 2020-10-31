@@ -9,7 +9,8 @@ const App = () => {
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [gameEnds, setGameEnds] = useState(false);
+  const [showAnswers, setShowAnswers] = useState(false);
+
 
   useEffect(() => {
     fetch(url)
@@ -19,44 +20,47 @@ const App = () => {
       });
   }, []);
 
-  const baseAnswer = (answer) => {
-    const newIndex = currentIndex + 1;
-    setCurrentIndex(newIndex);
 
+
+  const baseAnswer = (answer) => {
     if(answer === questions[currentIndex].
     correct) {
       setScore(score + 1);
-      }
+  }
 
-    if(newIndex >= questions.length) {
-      setGameEnds(true);
-    }
-  };
+  setShowAnswers(true);
 
+};
    if(!questions.length) {
      return null;
    }
 
+
     return (
       <div>
       {
-          gameEnds ? (
-            <h1 className="text-3xl text-black font-bold">You are a Genius!! Your Score is {score}!</h1>
-          )
-          :
-          (
-          questions.length > 0 ? (
+            questions.length > 0 ? (
           <div className='container'>
-            <Trivia data={questions[currentIndex]} baseAnswer={baseAnswer} />
+            currentIndex >=questions.length ? (
+            <h1 className="text-3xl text-black font-bold">
+            You are a Genius!! Your Score is {score}!
+            </h1>
+          ) : (
+            <Trivia
+            data={questions[currentIndex]}
+            showAnswers{showAnswers}
+            baseAnswer={baseAnswer}
+            />
+          )}
          </div>
-       )
-       :
-       (
+       ) : (
           <h2 className='text-2xl text-green'>..The Spiders are Dancing!</h2>
-        ))
+        )
       }
       </div>
-    )
+
+   )
+   }
   }
 
 
