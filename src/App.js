@@ -47,6 +47,10 @@ const handleNewQuestion = () => {
   setCurrentIndex(currentIndex + 1);
 };
 
+const reloadPage = () => {
+  window.location.reload(false);
+}
+
    if(!questions.length) {
      return null;
    }
@@ -62,9 +66,15 @@ const handleNewQuestion = () => {
                 currentIndex >= questions.length
               ?
               (
-              <h1 className="text-3xl text-white-800 font-bold">
-              Your Score: You got {score} out of 10 questions.
-              </h1>
+              <div className="flex justify-center items-center-px-10">
+                <h1 className="text-3xl text-white font-bold">
+                Your Score: You got {score} out of 10 questions. Pretty Clever!
+                </h1>
+                <button onClick={reloadPage} className={`ml-auto bg-black hover:bg-purple-700 hover:text-yellow-300 text-red-800 font-bubble font-bold
+                  py-2 px-4 p4 hover:border-red-500 rounded shadow h-16 w-24 mt-20`}>
+                TRY AGAIN?
+                </button>
+              </div>
 
               ) : (
                   <Trivia
