@@ -29,7 +29,7 @@ const App = () => {
       });
   }, []);
 
-  
+
   const baseAnswer = (answer) => {
     if(!showAnswers) {
       // prevent multiples
@@ -50,28 +50,6 @@ const handleNewQuestion = () => {
    if(!questions.length) {
      return null;
    }
-
-    {/* return (
-            questions.length > 0 ? (
-          <div className='container'>
-            currentIndex >=questions.length ? (
-            <h1 className="text-3xl text-white-800 font-bold">
-            Nice Job!! Your Score is {score}!
-            </h1>
-
-          ) : (
-            <Trivia
-            data={questions[currentIndex]}
-            showAnswers={showAnswers}
-            handleNewQuestion={handleNewQuestion}
-            baseAnswer={baseAnswer}
-            />
-           )}
-        </div>
-       ) : (
-          <h2 className='text-2xl text-green font-bold'>..The Spiders are Dancing!</h2>
-
-    ))  */}
 
     return (
         <div>
