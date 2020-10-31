@@ -25,16 +25,16 @@ const Trivia = ({
       <div className='grid grid-cols-2 gap-6 mt-6'>
 
        {mixedAnswers.map((answer) => {
-          const bgColor = showAnswers ?
+          const textColor = showAnswers ?
           answer === correct
-          ? 'bg-green-500'
-          : 'bg-red-800'
-          : 'bg-yellow-500';
-          const textcolor = showAnswers ?
-          'text-white' : 'text-black-800';
+          ? 'text-green-500'
+          : 'text-red-800'
+          : 'text-black-800';
+          // const textColor = showAnswers ?
+          // 'text-white' : 'text-black-800';
           return (
              <button
-                className={`${bgColor} ${textcolor}
+                className={`bg-yellow ${textColor}
                 p-4
                 font-bold
                 border border-black

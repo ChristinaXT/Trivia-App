@@ -23,11 +23,12 @@ const App = () => {
 
 
   const baseAnswer = (answer) => {
-    if(answer === questions[currentIndex].
-    correct) {
+    if(!showAnswers) {
+      // prevent multiples 
+    if(answer === questions[currentIndex].correct) {
       setScore(score + 1);
   }
-
+}
   setShowAnswers(true);
 
 };
@@ -51,7 +52,7 @@ const App = () => {
             showAnswers{showAnswers}
             baseAnswer={baseAnswer}
             />
-          )}
+          )
          </div>
        ) : (
           <h2 className='text-2xl text-green'>..The Spiders are Dancing!</h2>
@@ -61,7 +62,7 @@ const App = () => {
 
    )
    }
-  }
+
 
 
 export default App;
