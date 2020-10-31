@@ -37,9 +37,13 @@ const App = () => {
     return (
       <div>
       {
-        questions.length > 0
-        ?
-        (
+
+          gameEnds ? (
+            <div>Your Score was {score}</div>
+          )
+          :
+          (
+          questions.length > 0 ? (
           <div className='container'>
             <Trivia data={questions[currentIndex]} baseAnswer={baseAnswer} />
          </div>
@@ -47,7 +51,7 @@ const App = () => {
        :
        (
           <h2 className='text-2xl text-green'>..The Spiders are Dancing!</h2>
-        )
+        ))
       }
       </div>
     )
