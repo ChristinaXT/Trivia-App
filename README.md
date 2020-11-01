@@ -8,7 +8,7 @@ Steps to Run This app
 
 3) In your terminal cd into the file you have created and TYPE "git clone" and PASTE "https://github.com/ChristinaXT/Trivia-App.git" (the HTTP link you just copied)
 
-4) cd into Trivia-App
+4) cd into Trivia-App 
 
 5) yarn --cwd game-api install && yarn install (to install the front and back-end)
 
