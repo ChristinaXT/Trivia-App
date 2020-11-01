@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Trivia App This is a Full Stack App built with React
 
 Steps to Run This app
