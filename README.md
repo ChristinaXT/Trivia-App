@@ -1,4 +1,4 @@
-Trivia App This is a Full Stack App built with React and JSON SERVER
+Trivia App This is a Full Stack App built with React
 
 Steps to Run This app
 
@@ -8,20 +8,14 @@ Steps to Run This app
 
 3) In your terminal cd into the file you have created and TYPE "git clone" and PASTE "https://github.com/ChristinaXT/Trivia-App.git" (the HTTP link you just copied)
 
-4) cd into Trivia-App-react-json-server
+4) cd into Trivia-App
 
-5) yarn --cwd game-api install
+5) yarn --cwd game-api install && yarn install (to install the front and back-end)
 
-6) yarn --cwd game-front-end install
+6) yarn --cwd game-api start
 
-7) open a new terminal window and cd game-api
+7) In your browser, Open a localhost:3001/quiz-info (for JSON data)
 
-8) In that new terminal, type, yarn start
+8) yarn start
 
-9) In the other terminal window cd game-front-end and type yarn start
-
-10) In your browser, Open a localhost:3001/quiz-info (for JSON data), and localhost:3000 (for the game to run)
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/yKGhI4Z" data-context="false" ><a href="//imgur.com/a/yKGhI4Z"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+9) In your browser, on another tab, view localhost:3000 (for the game to run)
