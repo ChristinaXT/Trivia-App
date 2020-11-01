@@ -23,3 +23,8 @@ Steps to Run This app
 10) In your browser, Open a localhost:3001/quiz-info (for JSON data), and localhost:3000 (for the game to run)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+![img](https://i.imgur.com/j8VINlf.png)
+![img](https://i.imgur.com/3wlSJsM.png)
+![img](https://i.imgur.com/JHrsJDV.png)
+![img](https://i.imgur.com/NJP2lJc.png)
