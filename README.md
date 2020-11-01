@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Trivia App This is a Full Stack App built with React
 
 Steps to Run This app
@@ -8,7 +9,7 @@ Steps to Run This app
 
 3) In your terminal cd into the file you have created and TYPE "git clone" and PASTE "https://github.com/ChristinaXT/Trivia-App.git" (the HTTP link you just copied)
 
-4) cd into Trivia-App 
+4) cd into Trivia-App
 
 5) yarn --cwd game-api install && yarn install (to install the front and back-end)
 
@@ -19,3 +20,7 @@ Steps to Run This app
 8) yarn start
 
 9) In your browser, on another tab, view localhost:3000 (for the game to run)
+
+10) In your browser, Open a localhost:3001/quiz-info (for JSON data), and localhost:3000 (for the game to run)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
