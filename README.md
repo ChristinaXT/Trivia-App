@@ -18,9 +18,7 @@ Steps to Run This app
 
 8) yarn start
 
-9) In your browser, on another tab, view localhost:3000 (for the game to run)
-
-10) In your browser, Open a localhost:3001/quiz-info (for JSON data), and localhost:3000 (for the game to run)
+9) In your browser, Open a localhost:3001/quiz-info (for JSON data), and localhost:3000 (for the game to run)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
